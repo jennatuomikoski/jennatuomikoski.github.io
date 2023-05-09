@@ -6,11 +6,12 @@
         <title>Demo 8</title>
     </head>
     <body>
-        <p id="tervetulo_teksti">Tervetuloa </p>
-        <form id="kirjautumis_lomake">
-            <input type="text" id="nimi" placeholder="Syötä nimesi" value="">
-            <input type="submit" id="kirjaudu_nappi" value="Kirjaudu sisään" onClick="kirjaudu()">
-            <input type="submit" id="kirjaudu_ulos" value="Kirjaudu ulos" onClick="kirjauduUlos()">
+        <p id="tervetuloTeksti">Tervetuloa </p>
+        <form id="kirjautumisLomake">
+            <label for="kayttajatunnus">Nimi: </label>
+            <input type="text" id="kayttajatunnus" name="kayttajatunnus" required>
+            <input type="submit" value="Kirjaudu" id="kirjauduNappi" onclick="kirjaudu()" >
         </form>
+        <button type="button" id="kirjauduUlos" onclick="kirjauduUlos()" style="display: none;">Kirjaudu ulos</button>
     </body>
 </html>

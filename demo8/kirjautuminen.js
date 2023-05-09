@@ -1,16 +1,31 @@
-document.addEventListener("DOMContentLoaded", onkoKirjautunut);
-
-function onkoKirjautunut() {
-    if (localStorage.getItem("kirjautunut") === 'kyllä') {
-        document.getElementById('tervetulo_teksti').textContent += localStorage.getItem("nimi");
-        document.getElementById("kirjautumis_lomake").style.display = "none";
-        document.getElementById("kirjaudu_ulos").style.display = "block";
-        document.getElementById("kirjaudu_nappi").style.display = "none";
+onkoKirjautunut = () => {
+  
+    if (localStorage.getItem("kirjautunut") === "kylla") {
+        document.getElementById('tervetuloTeksti').textContent += localStorage.getItem("kayttajatunnus");
+        document.getElementById("kirjautumisLomake").style.display = "none";
+        document.getElementById("kirjauduUlos").style.display = "inline-block";
+        document.getElementById("kirjauduNappi").style.display = "none";
     } else {
-        document.getElementById("kirjaudu_ulos").style.display = "none";
+        document.getElementById("kirjauduUlos").style.display="none";
+        document.getElementById("kirjauduNappi").style.display="inline-block";
     }
 }
-function kirjaudu() {
-    localStorage.setItem("nimi", document.getElementById("nimi").value);
-    localStorage.setItem("kirjautunut", "kyllä");
+kirjaudu = () => {
+    localStorage.setItem("kayttajatunnus", document.getElementById("kayttajatunnus").value);
+    localStorage.setItem("kirjautunut", "kylla"); 
+    onkoKirjautunut();
+    
 }
+kirjauduUlos = () => {
+
+        document.getElementById("kirjauduUlos").style.display="none";
+        document.getElementById("kirjauduNappi").style.display="inline-block";
+        document.getElementById("kirjautumisLomake").style.display="inline-block";
+        document.getElementById("tervetuloTeksti").textContent = "Tervetuloa";
+        localStorage.removeItem("kayttajatunnus");
+        localStorage.removeItem("kirjautunut");
+        window.location.href = "index.html";   
+        location.reload(); 
+}
+
+document.addEventListener("DOMContentLoaded", onkoKirjautunut);
