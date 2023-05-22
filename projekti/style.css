@@ -62,6 +62,10 @@ body {
     font-size: 30px;
     color: var(--secondary);
 }
+.year {
+    font-size: 30px;
+    color: var(--secondary);
+}
 /* Kello */
 .clock {  
     height: 200px;

@@ -4,6 +4,7 @@ const secondsEl = document.getElementById('second')
 const toggle = document.getElementById('toggle')
 const dateEl = document.getElementById('date')
 const timeEl = document.getElementById('time')
+const yearEl = document.getElementById('year')
 
 // Tumma vaalea modin vaihtaja
 toggle.addEventListener('click', () => {
@@ -27,12 +28,13 @@ setInterval(() => {
     const date = time.getDate();
     const month = time.getMonth();
     const hour = time.getHours();
-    const hourIn12Hour = hour % 12;
     const minutes = time.getMinutes();
     const seconds = time.getSeconds();
+    const year = time.getFullYear();
 
     dateEl.innerText = `${days[day]}, ${date} ${months[month]}`
     timeEl.innerText = `${hour}:${minutes< 10? `0${minutes}`: minutes}`
+    yearEl.innerText = `${year}`
 
     hoursEl.style.transform = `translate(-50%, -100%) rotate(${hour * 30}deg)`
 
