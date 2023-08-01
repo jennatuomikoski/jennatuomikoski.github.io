@@ -1,9 +1,9 @@
-function sininen(sin) {
-    sin.style.backgroundColor = "blue";
-}
-function punanen(pun) {
-    pun.style.backgroundColor = "red";
-}
-function musta(mus) {
-    mus.style.backgroundColor = "black";
+function nappi(btn) {
+    if (btn.id === "sini") {
+        document.body.style.backgroundColor = "blue";
+    } else if (btn.id === "puna") {
+        document.body.style.backgroundColor = "red";
+    } else if (btn.id === "musta") {
+        document.body.style.backgroundColor = "black";
+    } 
 }
