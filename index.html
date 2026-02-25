@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="fi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tassu adoptiopalvelu</title>
+    <link rel="stylesheet" href="tyylit/tyylit.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header-inner">
+        <div class="header-left">
+          <img class="tassu" src="kuvat/Tassu.png" alt="tassu logo" />
+          <h1 class="logo dynapuff-title">Pieni tassu, suuri sydän</h1>
+        </div>
+        <button class="hamburger" id="hamburger" aria-label="Avaa valikko">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+
+      <nav id="nav">
+        <ul>
+          <li><a class="active" href="index.html">Etusivu</a></li>
+          <li><a href="elaimet.html">Adoptoitavat eläimet</a></li>
+          <li><a href="adoptio.html">Adoptioprosessi</a></li>
+          <li><a href="yhteystiedot.html">Yhteystiedot</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section class="hero"></section>
+    <main class="container">
+      <section class="layout">
+        <h2 class="title">Tervetuloa Tassu adoptiopalveluun!</h2>
+
+        <p class="esittely">
+          Tassu on eläinten adoptiopalvelu, jonka tavoitteena on auttaa
+          kodittomia eläimiä löytämään turvallinen ja rakastava koti. Palvelu
+          kokoaa yhteen adoptoitavat eläimet ja tarjoaa selkeää, luotettavaa
+          tietoa adoptioprosessista. Sivuston avulla käyttäjä voi tutustua eri
+          eläimiin, lukea heidän tarinoitaan ja ottaa helposti yhteyttä
+          adoptiota koskevissa kysymyksissä. Tassu pyrkii tekemään adoptoinnista
+          mahdollisimman helppoa ja läpinäkyvää sekä tukemaan sekä eläimiä että
+          tulevia omistajia koko prosessin ajan.
+        </p>
+
+        <button class="elaimet">
+          <a href="elaimet.html">Katso adoptoitavat eläimet</a>
+        </button>
+
+        <div class="cards">
+          <div class="card">
+            <img src="kuvat/koira1.jpg" alt="Mauri koira" class="kuva" />
+            <h4 class="tiedot">Mauri, 1 v</h4>
+            <button class="read-more"><a href="#">Lue lisää</a></button>
+          </div>
+          <div class="card">
+            <img src="kuvat/kissa1.jpg" alt="Misu kissa" class="kuva" />
+            <h4 class="tiedot">Misu, 3 v</h4>
+            <button class="read-more"><a href="#">Lue lisää</a></button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-info">
+        <p>
+          <a href="mailto:asiakaspalvelu@tassuadoptio.fi" class="email"
+            >asiakaspalvelu@tassuadoptio.fi</a
+          >
+        </p>
+        <p>040 - 1234 567</p>
+      </div>
+    </footer>
+  </body>
+  <script>
+    const hamburger = document.getElementById('hamburger')
+    const nav = document.getElementById('nav')
+
+    hamburger.addEventListener('click', () => {
+      nav.classList.toggle('open')
+    })
+  </script>
+</html>

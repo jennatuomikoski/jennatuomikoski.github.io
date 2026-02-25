@@ -1,0 +1,413 @@
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.dynapuff-title {
+  font-family: 'DynaPuff', system-ui;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-variation-settings: 'wdth' 100;
+  color: #f6e8cd;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.6;
+  background-color: #f6e8cd;
+  color: #111b2a;
+}
+.layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.title {
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 24px;
+  text-align: center;
+  line-height: 1;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+header {
+  background: #111b2a;
+  color: #f6e8cd;
+  position: relative;
+}
+
+.header-inner {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0.25rem 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.tassu {
+  width: 100%;
+  max-width: 110px;
+  height: auto;
+}
+
+.logo {
+  margin: 0;
+  font-size: 32px;
+  line-height: 1;
+}
+
+#nav {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: #111b2a;
+  width: 100%;
+  display: none;
+  z-index: 1000;
+}
+
+#nav ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 0;
+  list-style: none;
+}
+
+#nav a {
+  color: #f6e8cd;
+  font-size: 32px;
+  text-decoration: none;
+}
+
+#nav a.active {
+  color: #b1583c;
+  font-weight: 700;
+}
+
+#nav.open {
+  display: block;
+}
+
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 35px;
+  height: 4px;
+  margin: 1px;
+  background: #b1583c;
+  border-radius: 10px;
+}
+
+.hero {
+  height: 100px;
+  background: url('../kuvat/banneri.jpg') center / cover no-repeat;
+  display: none;
+}
+
+main {
+  padding: 2rem 0;
+}
+
+.esittely {
+  font-size: 16px;
+  line-height: 1.2;
+  margin: 0 10px;
+}
+
+.elaimet {
+  width: 90%;
+  background-color: #b1583c;
+  padding: 20px 0;
+  justify-self: center;
+  margin: 20px 0;
+  color: #111b2a;
+  border: #752820 5px solid;
+  border-radius: 13px;
+  font-family: 'Montserrat', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 20px;
+}
+.elaimet a {
+  text-decoration: none;
+  color: #111b2a;
+  font-weight: bold;
+}
+.elaimet a:hover {
+  text-decoration: underline;
+}
+
+.card {
+  background: #f6e8cd;
+  padding: 1rem;
+  border-radius: 8px;
+  border: #66211c 3px solid;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.kuva {
+  width: 100%;
+  height: 100px;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+.tiedot {
+  padding: 5px 0;
+  font-weight: 400;
+  font-size: 22px;
+}
+
+.read-more {
+  width: 100%;
+  background-color: #b1583c;
+  padding: 12px 0;
+  color: #111b2a;
+  border: #752820 1px solid;
+  border-radius: 5px;
+  font-family: 'Montserrat', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 20px;
+}
+.read-more a {
+  text-decoration: none;
+  color: #111b2a;
+}
+.read-more a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  border-top: #b1583c 3px solid;
+  background: #f6e8cd;
+  color: #111b2a;
+  text-align: left;
+  padding: 1rem 0;
+  position: relative;
+  z-index: 1;
+}
+
+.footer-info {
+  margin-left: 20px;
+  font-weight: bold;
+  font-size: 16;
+  color: #111b2a;
+  line-height: 1.25;
+}
+.footer-info .email {
+  color: #111b2a;
+  text-decoration: none;
+}
+.footer-info .email:visited {
+  color: #111b2a;
+}
+.footer-info .email:hover {
+  text-decoration: underline;
+}
+
+/* TABLETTI ~834px */
+@media (min-width: 600px) {
+  .hamburger {
+    display: flex;
+  }
+  .hero {
+    display: block;
+  }
+  .layout {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      'title elaimet'
+      'esittely cards';
+    gap: 1.5rem;
+  }
+  .title {
+    grid-area: title;
+    text-align: center;
+    font-size: 24px;
+    margin-top: 40px;
+  }
+
+  .elaimet {
+    grid-area: elaimet;
+    align-self: start;
+
+  }
+
+  .esittely {
+    grid-area: esittely;
+    font-size: 24px;
+    line-height: 1.1;
+
+  }
+
+  .cards {
+    grid-area: cards;
+    align-self: start;
+  }
+  .card {
+    align-self: start;
+  }
+}
+
+/* DESKTOP ~1440px */
+@media (min-width: 1024px) {
+  .logo {
+    font-size: 2.5rem;
+  }
+  .hamburger {
+    display: none;
+  }
+  .header-inner {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0.1rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .header-left {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+    margin-left: 20px;
+  }
+  .tassu {
+    width: 100%;
+    max-width: 140px;
+    height: auto;
+  }
+
+  .logo {
+    margin: 0;
+    font-size: 2.5rem;
+  }
+  #nav {
+    position: static;
+    display: flex;
+    justify-content: center;
+  }
+
+  #nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+  }
+
+  #nav a {
+    color: #f6e8cd;
+    font-size: 32px;
+    text-decoration: none;
+    line-height: 1;
+  }
+
+  #nav a.active {
+    color: #b1583c;
+    font-weight: 700;
+  }
+
+  .esittely {
+    font-size: 26px;
+    line-height: 1.1;
+    margin-right: 5px;
+  }
+  .elaimet {
+    width: 80%;
+    background-color: #b1583c;
+    padding: 12px 0;
+    display: block;
+    align-items: center;
+    margin-left: 10%;
+    margin-bottom: 30px;
+    margin-top: 10px;
+    color: #111b2a;
+    border: #752820 5px solid;
+    border-radius: 13px;
+    font-family: 'Montserrat', sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 20px;
+  }
+  .card {
+    background: #f6e8cd;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: #66211c 3px solid;
+  }
+
+  .kuva {
+    width: 100%;
+    height: 200px;
+    border-radius: 5px;
+    object-fit: cover;
+  }
+  h4 {
+    padding: 5px 0;
+  }
+  .read-more {
+    width: 100%;
+    background-color: #b1583c;
+    padding: 12px 0;
+    color: #111b2a;
+    border: #752820 1px solid;
+    border-radius: 5px;
+    font-family: 'Montserrat', sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 20px;
+  }
+  .read-more a {
+    text-decoration: none;
+    color: #111b2a;
+  }
+  .read-more a:hover {
+    text-decoration: underline;
+  }
+}
+
+/*Jos joskus kortteja tulee enemmän kuin 2:
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+}
+*/
