@@ -14,32 +14,27 @@
           <h1 class="logo dynapuff-title">Pieni tassu, suuri sydän</h1>
         </div>
         <button class="hamburger" id="hamburger" aria-label="Avaa valikko">
-          <span>Etusivu</span>
-          <span>Adoptoitavat eläimet</span>
-          <span>Adoptioprosessi</span>
-          <span>Yhteystiedot</span>
+          <span></span>
+          <span></span>
+          <span></span>
         </button>
       </div>
-    
-        <nav id="nav">
-          <ul>
-            <li><a class="active" href="index.html">Etusivu</a></li>
-            <li><a href="elaimet.html">Adoptoitavat eläimet</a></li>
-            <li><a href="adoptio.html">Adoptioprosessi</a></li>
-            <li><a href="yhteystiedot.html">Yhteystiedot</a></li>
-          </ul>
-        </nav>
 
+      <nav id="nav">
+        <ul>
+          <li><a href="index.html">Etusivu</a></li>
+          <li><a href="elaimet.html">Adoptoitavat eläimet</a></li>
+          <li><a class="active" href="adoptio.html">Adoptioprosessi</a></li>
+          <li><a href="yhteystiedot.html">Yhteystiedot</a></li>
+        </ul>
+      </nav>
     </header>
     <section class="hero"></section>
     <main class="container">
-      <section class="grid">
-        <h2>Tervetuloa Tassu adoptiopalveluun!</h2>
-        <button><a href="elaimet.html">Katso adoptoitavat eläimet</a></button>
-      </section>
+      <section class="layout">
+        <h2 class="title">Tervetuloa Tassu adoptiopalveluun!</h2>
 
-      <section class="grid">
-        <p>
+        <p class="esittely">
           Tassu on eläinten adoptiopalvelu, jonka tavoitteena on auttaa
           kodittomia eläimiä löytämään turvallinen ja rakastava koti. Palvelu
           kokoaa yhteen adoptoitavat eläimet ja tarjoaa selkeää, luotettavaa
@@ -47,27 +42,35 @@
           eläimiin, lukea heidän tarinoitaan ja ottaa helposti yhteyttä
           adoptiota koskevissa kysymyksissä. Tassu pyrkii tekemään adoptoinnista
           mahdollisimman helppoa ja läpinäkyvää sekä tukemaan sekä eläimiä että
-          tulevia omistajia koko prosessin ajan
+          tulevia omistajia koko prosessin ajan.
         </p>
 
-        <section class="grid">
+        <button class="elaimet">
+          <a href="elaimet.html">Katso adoptoitavat eläimet</a>
+        </button>
+
+        <div class="cards">
           <div class="card">
-            <img src="kuvat/koira1.jpg" alt="Mauri koira" class="kuva"/>
-            <h4>Mauri, 1 v</h4>
-            <button>Lue lisää</button>
+            <img src="kuvat/koira1.jpg" alt="Mauri koira" class="kuva" />
+            <h4 class="tiedot">Mauri, 1 v</h4>
+            <button class="read-more"><a href="#">Lue lisää</a></button>
           </div>
           <div class="card">
-            <img src="kuvat/kissa1.jpg" alt="Misu kissa" class="kuva"/>
-            <h4>Misu, 3 v</h4>
-            <button>Lue lisää</button>
+            <img src="kuvat/kissa1.jpg" alt="Misu kissa" class="kuva" />
+            <h4 class="tiedot">Misu, 3 v</h4>
+            <button class="read-more"><a href="#">Lue lisää</a></button>
           </div>
-        </section>
+        </div>
       </section>
     </main>
 
     <footer>
       <div class="footer-info">
-        <p><a href="mailto:asiakaspalvelu@tassuadoptio.fi" class="email">asiakaspalvelu@tassuadoptio.fi</a></p>
+        <p>
+          <a href="mailto:asiakaspalvelu@tassuadoptio.fi" class="email"
+            >asiakaspalvelu@tassuadoptio.fi</a
+          >
+        </p>
         <p>040 - 1234 567</p>
       </div>
     </footer>
@@ -77,7 +80,7 @@
     const nav = document.getElementById('nav')
 
     hamburger.addEventListener('click', () => {
-      nav.classList.toggle('active')
+      nav.classList.toggle('open')
     })
   </script>
 </html>

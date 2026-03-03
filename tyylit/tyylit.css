@@ -132,15 +132,24 @@ header {
   background: url('../kuvat/banneri.jpg') center / cover no-repeat;
   display: none;
 }
+.herocontact {
+  height: 50px;
+  background: url('../kuvat/banneri.jpg') center / cover no-repeat;
+}
 
 main {
   padding: 2rem 0;
 }
-
+/*Etusivu*/
 .esittely {
   font-size: 16px;
   line-height: 1.2;
   margin: 0 10px;
+  hyphens: auto;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+  overflow-wrap: break-word;
+  word-break: normal;
 }
 
 .elaimet {
@@ -213,6 +222,62 @@ main {
 .read-more a:hover {
   text-decoration: underline;
 }
+/*Yhteystiedot*/
+.contact-section {
+  max-width: 600px;
+  margin: 0 auto 60px auto;
+  padding: 0 16px;
+}
+
+.contact-section h2 {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+input,
+textarea {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #007BFF;
+}
+
+.submit-btn {
+  margin-top: 8px;
+  padding: 12px;
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background-color: #005ecb;
+}
 
 footer {
   border-top: #b1583c 3px solid;
@@ -257,6 +322,12 @@ footer {
       'esittely cards';
     gap: 1.5rem;
   }
+  .layoutcontact {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "title title"
+      "info  contact-form";
+  }
   .title {
     grid-area: title;
     text-align: center;
@@ -283,6 +354,9 @@ footer {
   }
   .card {
     align-self: start;
+  }
+  footer {
+    margin-top: 40px;
   }
 }
 
@@ -343,29 +417,16 @@ footer {
     font-weight: 700;
   }
 
+  .title {
+    font-size: 36px;
+  }
+
   .esittely {
-    font-size: 26px;
+    font-size: 28px;
     line-height: 1.1;
     margin-right: 5px;
   }
-  .elaimet {
-    width: 80%;
-    background-color: #b1583c;
-    padding: 12px 0;
-    display: block;
-    align-items: center;
-    margin-left: 10%;
-    margin-bottom: 30px;
-    margin-top: 10px;
-    color: #111b2a;
-    border: #752820 5px solid;
-    border-radius: 13px;
-    font-family: 'Montserrat', sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 500;
-    font-style: normal;
-    font-size: 20px;
-  }
+  
   .card {
     background: #f6e8cd;
     padding: 1.5rem;
