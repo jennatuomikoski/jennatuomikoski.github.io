@@ -223,15 +223,16 @@ main {
   text-decoration: underline;
 }
 /*Yhteystiedot*/
-.contact-section {
+.layout-contact {
   max-width: 600px;
-  margin: 0 auto 60px auto;
+  margin: 0 auto 10px auto;
   padding: 0 16px;
+  display: grid;
 }
 
-.contact-section h2 {
+.contact-title {
   text-align: center;
-  margin-bottom: 24px;
+  margin-bottom: 20px;
 }
 
 .contact-form {
@@ -254,31 +255,96 @@ input,
 textarea {
   padding: 10px;
   border-radius: 6px;
-  border: 1px solid #ccc;
+  border: 1px solid #b1583c;
   font-size: 1rem;
 }
 
 input:focus,
 textarea:focus {
   outline: none;
-  border-color: #007BFF;
+  border-color: #752820;
 }
 
 .submit-btn {
   margin-top: 8px;
   padding: 12px;
-  background-color: #007BFF;
-  color: #fff;
-  border: none;
-  border-radius: 6px;
-  font-size: 1rem;
+  background-color: #b1583c;
+  color: #111b2a;
+  border: #752820 5px solid;
+  border-radius: 10px;
   cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 20px;
 }
 
-.submit-btn:hover {
-  background-color: #005ecb;
+hr {
+  margin: 20px 0;
+  height: 2px;
+  background-color: #b1583c;
+  border-width: 0;
+  border-radius: 10px;
 }
-
+.info {
+  font-size: 20px;
+}
+.info .email {
+  color: #111b2a;
+  text-decoration: none;
+}
+.hr-info {
+  display: none;
+}
+.yhteys {
+  margin-bottom: 5px;
+}
+/*Adoptio*/
+.button-adoptio {
+  width: 90%;
+  background-color: #b1583c;
+  padding: 20px 0;
+  justify-self: center;
+  margin: 5px 0;
+  color: #111b2a;
+  border: #752820 5px solid;
+  border-radius: 13px;
+  font-family: 'Montserrat', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 20px;
+  max-height: 75px;
+}
+.button-adoptio a {
+  text-decoration: none;
+  color: #111b2a;
+  font-weight: bold;
+}
+.button-adoptio a:hover {
+  text-decoration: underline;
+}
+.napit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+}
+/*Eläimet*/
+.heroelaimet {
+  height: 50px;
+  background: url('../kuvat/banneri.jpg') center / cover no-repeat;
+}
+.title-elaimet {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.cards-elaimet {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
 footer {
   border-top: #b1583c 3px solid;
   background: #f6e8cd;
@@ -292,7 +358,7 @@ footer {
 .footer-info {
   margin-left: 20px;
   font-weight: bold;
-  font-size: 16;
+  font-size: 16px;
   color: #111b2a;
   line-height: 1.25;
 }
@@ -315,6 +381,9 @@ footer {
   .hero {
     display: block;
   }
+  .herocontact, .heroelaimet {
+    height: 100px;
+  }
   .layout {
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
@@ -322,17 +391,12 @@ footer {
       'esittely cards';
     gap: 1.5rem;
   }
-  .layoutcontact {
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas:
-      "title title"
-      "info  contact-form";
-  }
+
   .title {
     grid-area: title;
     text-align: center;
     font-size: 24px;
-    margin-top: 40px;
+    margin-top: 20px;
   }
 
   .elaimet {
@@ -352,8 +416,64 @@ footer {
     grid-area: cards;
     align-self: start;
   }
+  .cards-elaimet {
+    grid-template-columns: repeat(4, 1fr);
+  }
   .card {
     align-self: start;
+  }
+  .layout-contact {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "contact-title contact-title"
+      "contact-form info";
+    gap: 1.5rem;
+    max-width: none;
+    width:100%;
+  }
+  .contact-title {
+    grid-area: contact-title;
+  }
+  .contact-form {
+    grid-area: contact-form;
+  }
+  .info {
+    grid-area: info;   
+  }
+  .herocontact {
+    height: 100px;
+  }
+  hr {
+    display: none;
+  }
+  .hr-info {
+    display: block;
+  }
+  .layout-adoptio {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas:
+      "title-adoptio title-adoptio"
+      "esittely-adoptio napit";
+    gap: 1.5rem;
+    max-width: none;
+    width:100%;
+  }
+  .title-adoptio {
+    grid-area: title-adoptio;
+    text-align: center;
+    font-size: 24px;
+  }
+  .esittely-adoptio {
+    grid-area: esittely-adoptio;
+  }
+  .napit {
+    grid-area: napit;
+    gap: 1rem;
+  }
+  .button-adoptio {
+    width: 100%;
+    font-size: 16px;
   }
   footer {
     margin-top: 40px;
@@ -417,9 +537,10 @@ footer {
     font-weight: 700;
   }
 
-  .title {
+  .title, .title-adoptio, .title-elaimet, .contact-title{
     font-size: 36px;
   }
+ 
 
   .esittely {
     font-size: 28px;

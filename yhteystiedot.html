@@ -31,32 +31,37 @@
     </header>
     <section class="herocontact"></section>
     <main class="container">
-      <section class="layoutcontact">
-        <h2 class="title">Ota yhteyttä</h2>
+      <section class="layout-contact">
+        <h2 class="contact-title">Ota yhteyttä</h2>
 
         <form class="contact-form">
           <div class="form-group">
-            <label for="name">Nimi</label>
+            <label for="name">Nimi:</label>
             <input type="text" id="name" name="name" required />
           </div>
 
           <div class="form-group">
-            <label for="email">Sähköpostiosoite</label>
+            <label for="email">Sähköpostiosoite:</label>
             <input type="email" id="email" name="email" required />
           </div>
 
           <div class="form-group">
-            <label for="message">Viesti</label>
+            <label for="message">Viesti:</label>
             <textarea id="message" name="message" rows="5" required></textarea>
           </div>
 
           <button type="submit" class="submit-btn">Lähetä viesti</button>
         </form>
+        <hr>
         <div class="info">
+          <h4 class="yhteys">Yhteystiedot</h4>
+          <hr class="hr-info">
           <p>Tassukuja 1, 020104 Helsinki</p>
-          <p>asiakaspalvelu@tassuadoptio.fi</p>
+          <p><a href="mailto:asiakaspalvelu@tassuadoptio.fi" class="email"
+            >asiakaspalvelu@tassuadoptio.fi</a></p>
           <p>040 - 1234 567</p>
           <p>Aukioloajat: 12 - 20</p>
+          <hr class="hr-info">
         </div>
       </section>
     </main>
