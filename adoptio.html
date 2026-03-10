@@ -2,15 +2,15 @@
 <html lang="fi">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tassu adoptiopalvelu</title>
-    <link rel="stylesheet" href="tyylit/tyylit.css" />
+    <link rel="stylesheet" href="tyylit/tyylit.css">
   </head>
   <body>
     <header>
       <div class="header-inner">
         <div class="header-left">
-          <img class="tassu" src="kuvat/Tassu.png" alt="tassu logo" />
+          <img class="tassu" src="kuvat/Tassu.png" alt="tassu logo">
           <h1 class="logo dynapuff-title">Pieni tassu, suuri sydän</h1>
         </div>
         <button class="hamburger" id="hamburger" aria-label="Avaa valikko">
@@ -35,37 +35,61 @@
         <h2 class="title-adoptio">Adoptioprosessi</h2>
 
         <div class="esittely-adoptio">
-          <p><strong>1. Tutustu eläimiin:</strong><br>Tutustu adoptoitaviin eläimiin ja heidän tietoihinsa
-          rauhassa. Jokaisella eläimellä on oma profiilisivu, josta löydät
-          perustiedot sekä lyhyen kuvauksen eläimen luonteesta ja taustasta.
-          Tavoitteena on löytää eläin, joka sopii omaan elämäntilanteeseesi.</p><br>
+          <p>
+            <strong>1. Tutustu eläimiin:</strong><br>Tutustu adoptoitaviin
+            eläimiin ja heidän tietoihinsa rauhassa. Jokaisella eläimellä on oma
+            profiilisivu, josta löydät perustiedot sekä lyhyen kuvauksen eläimen
+            luonteesta ja taustasta. Tavoitteena on löytää eläin, joka sopii
+            omaan elämäntilanteeseesi.
+          </p>
+          <br>
 
-          <p><strong>2. Ota yhteyttä:</strong><br>Kun löydät kiinnostavan eläimen, voit ottaa helposti
-          yhteyttä palvelun kautta. Yhteydenotossa voit esittää kysymyksiä ja
-          kertoa itsestäsi sekä asumis- ja elämäntilanteestasi. Tämä auttaa
-          varmistamaan, että eläin ja tuleva koti sopivat yhteen. </p><br>
+          <p>
+            <strong>2. Ota yhteyttä:</strong><br>Kun löydät kiinnostavan
+            eläimen, voit ottaa helposti yhteyttä palvelun kautta.
+            Yhteydenotossa voit esittää kysymyksiä ja kertoa itsestäsi sekä
+            asumis- ja elämäntilanteestasi. Tämä auttaa varmistamaan, että eläin
+            ja tuleva koti sopivat yhteen.
+          </p>
+          <br>
 
-          <p><strong>3. Tapaaminen:</strong><br>
-          Yhteydenoton jälkeen sovitaan tapaaminen, jossa pääset tutustumaan
-          eläimeen paremmin. Tapaaminen antaa mahdollisuuden nähdä eläimen
-          käytöstä ja luonnetta käytännössä sekä keskustella adoptiosta
-          tarkemmin.</p><br>
-          
-          <p><strong>4. Päätös:</strong><br>Tapaamisen jälkeen tehdään rauhassa päätös
-          adoptiosta. Päätös perustuu eläimen hyvinvointiin ja siihen, että
-          eläin saa pysyvän ja turvallisen kodin. Tarvittaessa adoptiopalvelu
-          antaa neuvoja ja vastaa kysymyksiin ennen lopullista päätöstä.</p><br>
+          <p>
+            <strong>3. Tapaaminen:</strong><br>
+            Yhteydenoton jälkeen sovitaan tapaaminen, jossa pääset tutustumaan
+            eläimeen paremmin. Tapaaminen antaa mahdollisuuden nähdä eläimen
+            käytöstä ja luonnetta käytännössä sekä keskustella adoptiosta
+            tarkemmin.
+          </p>
+          <br>
 
-          <p><strong>5. Uusi koti:</strong><br>Kun adoptiopäätös on tehty, eläin muuttaa uuteen kotiinsa.
-          Adoptiopalvelu tukee tarvittaessa myös adoptoinnin jälkeen ja tarjoaa
-          ohjeita eläimen sopeutumiseen uuteen ympäristöön.</p>
+          <p>
+            <strong>4. Päätös:</strong><br>Tapaamisen jälkeen tehdään rauhassa
+            päätös adoptiosta. Päätös perustuu eläimen hyvinvointiin ja siihen,
+            että eläin saa pysyvän ja turvallisen kodin. Tarvittaessa
+            adoptiopalvelu antaa neuvoja ja vastaa kysymyksiin ennen lopullista
+            päätöstä.
+          </p>
+          <br>
+
+          <p>
+            <strong>5. Uusi koti:</strong><br>Kun adoptiopäätös on tehty,
+            eläin muuttaa uuteen kotiinsa. Adoptiopalvelu tukee tarvittaessa
+            myös adoptoinnin jälkeen ja tarjoaa ohjeita eläimen sopeutumiseen
+            uuteen ympäristöön.
+          </p>
         </div>
         <div class="napit">
-          <button class="button-adoptio">
-            <a href="elaimet.html">Katso adoptoitavat eläimet</a>
+          <button
+            class="button-adoptio"
+            onclick="location.href = 'elaimet.html'"
+          >
+            Katso adoptoitavat eläimet
           </button>
-          <button class="button-adoptio">
-            <a href="yhteystiedot.html">Yhteystiedot</a>
+          <button
+            class="button-adoptio"
+            onclick="location.href = 'yhteystiedot.html'"
+          >
+            Yhteystiedot
           </button>
         </div>
       </section>
@@ -81,13 +105,13 @@
         <p>040 - 1234 567</p>
       </div>
     </footer>
-  </body>
-  <script>
-    const hamburger = document.getElementById('hamburger')
-    const nav = document.getElementById('nav')
+    <script>
+      const hamburger = document.getElementById('hamburger')
+      const nav = document.getElementById('nav')
 
-    hamburger.addEventListener('click', () => {
-      nav.classList.toggle('open')
-    })
-  </script>
+      hamburger.addEventListener('click', () => {
+        nav.classList.toggle('open')
+      })
+    </script>
+  </body>
 </html>

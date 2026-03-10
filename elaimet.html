@@ -2,15 +2,15 @@
 <html lang="fi">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tassu adoptiopalvelu</title>
-    <link rel="stylesheet" href="tyylit/tyylit.css" />
+    <link rel="stylesheet" href="tyylit/tyylit.css">
   </head>
   <body>
     <header>
       <div class="header-inner">
         <div class="header-left">
-          <img class="tassu" src="kuvat/Tassu.png" alt="tassu logo" />
+          <img class="tassu" src="kuvat/Tassu.png" alt="tassu logo">
           <h1 class="logo dynapuff-title">Pieni tassu, suuri sydän</h1>
         </div>
         <button class="hamburger" id="hamburger" aria-label="Avaa valikko">
@@ -38,44 +38,60 @@
 
         <div class="cards-elaimet">
           <div class="card">
-            <img src="kuvat/koira1.jpg" alt="Mauri koira" class="kuva" />
-            <h4 class="tiedot">Mauri, 1 v</h4>
-            <button class="read-more"><a href="#">Lue lisää</a></button>
+            <img src="kuvat/koira1.jpg" alt="Mauri koira" class="kuva">
+            <h3 class="tiedot">Mauri, 1 v</h3>
+            <button class="read-more" onclick="location.href = '#'">
+              Lue lisää
+            </button>
           </div>
           <div class="card">
-            <img src="kuvat/kissa1.jpg" alt="Misu kissa" class="kuva" />
-            <h4 class="tiedot">Misu, 3 v</h4>
-            <button class="read-more"><a href="#">Lue lisää</a></button>
+            <img src="kuvat/kissa1.jpg" alt="Misu kissa" class="kuva">
+            <h3 class="tiedot">Misu, 3 v</h3>
+            <button class="read-more" onclick="location.href = '#'">
+              Lue lisää
+            </button>
           </div>
           <div class="card">
-            <img src="kuvat/koira2.jpg" alt="Hessu koira" class="kuva" />
-            <h4 class="tiedot">Hessu, 1 v</h4>
-            <button class="read-more"><a href="#">Lue lisää</a></button>
+            <img src="kuvat/koira2.jpg" alt="Hessu koira" class="kuva">
+            <h3 class="tiedot">Hessu, 1 v</h3>
+            <button class="read-more" onclick="location.href = '#'">
+              Lue lisää
+            </button>
           </div>
           <div class="card">
-            <img src="kuvat/kissa2.jpg" alt="Viiru kissa" class="kuva" />
-            <h4 class="tiedot">Viiru, 2 v</h4>
-            <button class="read-more"><a href="#">Lue lisää</a></button>
+            <img src="kuvat/kissa2.jpg" alt="Viiru kissa" class="kuva">
+            <h3 class="tiedot">Viiru, 2 v</h3>
+            <button class="read-more" onclick="location.href = '#'">
+              Lue lisää
+            </button>
           </div>
           <div class="card">
-            <img src="kuvat/koira3.jpg" alt="Lilli koira" class="kuva" />
-            <h4 class="tiedot">Lilli, 2 v</h4>
-            <button class="read-more"><a href="#">Lue lisää</a></button>
+            <img src="kuvat/koira3.jpg" alt="Lilli koira" class="kuva">
+            <h3 class="tiedot">Lilli, 2 v</h3>
+            <button class="read-more" onclick="location.href = '#'">
+              Lue lisää
+            </button>
           </div>
           <div class="card">
-            <img src="kuvat/kissa3.jpg" alt="Rocky kissa" class="kuva" />
-            <h4 class="tiedot">Rocky, 3 v</h4>
-            <button class="read-more"><a href="#">Lue lisää</a></button>
+            <img src="kuvat/kissa3.jpg" alt="Rocky kissa" class="kuva">
+            <h3 class="tiedot">Rocky, 3 v</h3>
+            <button class="read-more" onclick="location.href = '#'">
+              Lue lisää
+            </button>
           </div>
           <div class="card">
-            <img src="kuvat/koira4.jpg" alt="Lumi koira" class="kuva" />
-            <h4 class="tiedot">Lumi, 3 v</h4>
-            <button class="read-more"><a href="#">Lue lisää</a></button>
+            <img src="kuvat/koira4.jpg" alt="Lumi koira" class="kuva">
+            <h3 class="tiedot">Lumi, 3 v</h3>
+            <button class="read-more" onclick="location.href = '#'">
+              Lue lisää
+            </button>
           </div>
           <div class="card">
-            <img src="kuvat/kissa4.jpg" alt="Topi kissa" class="kuva" />
-            <h4 class="tiedot">Topi, 6 v</h4>
-            <button class="read-more"><a href="#">Lue lisää</a></button>
+            <img src="kuvat/kissa4.jpg" alt="Topi kissa" class="kuva">
+            <h3 class="tiedot">Topi, 6 v</h3>
+            <button class="read-more" onclick="location.href = '#'">
+              Lue lisää
+            </button>
           </div>
         </div>
       </section>
@@ -91,13 +107,13 @@
         <p>040 - 1234 567</p>
       </div>
     </footer>
-  </body>
-  <script>
-    const hamburger = document.getElementById('hamburger')
-    const nav = document.getElementById('nav')
+    <script>
+      const hamburger = document.getElementById('hamburger')
+      const nav = document.getElementById('nav')
 
-    hamburger.addEventListener('click', () => {
-      nav.classList.toggle('open')
-    })
-  </script>
+      hamburger.addEventListener('click', () => {
+        nav.classList.toggle('open')
+      })
+    </script>
+  </body>
 </html>
