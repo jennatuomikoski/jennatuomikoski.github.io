@@ -8,7 +8,6 @@
 
 .dynapuff-title {
   font-family: 'DynaPuff', system-ui;
-  font-optical-sizing: auto;
   font-weight: 600;
   font-style: normal;
   font-variation-settings: 'wdth' 100;
@@ -17,7 +16,6 @@
 
 body {
   font-family: 'Montserrat', sans-serif;
-  font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
   line-height: 1.6;
@@ -132,7 +130,7 @@ header {
   background: url('../kuvat/banneri.jpg') center / cover no-repeat;
   display: none;
 }
-.herocontact {
+.herocontact, .heroelaimet {
   height: 50px;
   background: url('../kuvat/banneri.jpg') center / cover no-repeat;
 }
@@ -162,7 +160,6 @@ main {
   border: #752820 5px solid;
   border-radius: 13px;
   font-family: 'Montserrat', sans-serif;
-  font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;
   font-size: 20px;
@@ -183,7 +180,7 @@ main {
   border: #66211c 3px solid;
 }
 
-.cards {
+.cards, .cards-elaimet {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
@@ -191,7 +188,7 @@ main {
 
 .kuva {
   width: 100%;
-  height: 100px;
+  aspect-ratio: 4 / 3;
   border-radius: 5px;
   object-fit: cover;
 }
@@ -210,7 +207,6 @@ main {
   border: #752820 1px solid;
   border-radius: 5px;
   font-family: 'Montserrat', sans-serif;
-  font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;
   font-size: 20px;
@@ -274,7 +270,6 @@ textarea:focus {
   border-radius: 10px;
   cursor: pointer;
   font-family: 'Montserrat', sans-serif;
-  font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;
   font-size: 20px;
@@ -311,7 +306,6 @@ hr {
   border: #752820 5px solid;
   border-radius: 13px;
   font-family: 'Montserrat', sans-serif;
-  font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;
   font-size: 20px;
@@ -332,19 +326,12 @@ hr {
   margin-top: 10px;
 }
 /*Eläimet*/
-.heroelaimet {
-  height: 50px;
-  background: url('../kuvat/banneri.jpg') center / cover no-repeat;
-}
+
 .title-elaimet {
   text-align: center;
   margin-bottom: 20px;
 }
-.cards-elaimet {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1rem;
-}
+
 footer {
   border-top: #b1583c 3px solid;
   background: #f6e8cd;
@@ -439,9 +426,6 @@ footer {
   }
   .info {
     grid-area: info;   
-  }
-  .herocontact {
-    height: 100px;
   }
   hr {
     display: none;
@@ -555,12 +539,6 @@ footer {
     border: #66211c 3px solid;
   }
 
-  .kuva {
-    width: 100%;
-    height: 200px;
-    border-radius: 5px;
-    object-fit: cover;
-  }
   h4 {
     padding: 5px 0;
   }
@@ -572,7 +550,6 @@ footer {
     border: #752820 1px solid;
     border-radius: 5px;
     font-family: 'Montserrat', sans-serif;
-    font-optical-sizing: auto;
     font-weight: 500;
     font-style: normal;
     font-size: 20px;
